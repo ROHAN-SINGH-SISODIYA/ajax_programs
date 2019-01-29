@@ -1,0 +1,122 @@
+function addrecord()
+     	{
+     		var firstname=$('#name').val();
+     		var address=$('#address').val();
+     		var branch=$('#branch').val();
+     		var email=$('#email').val();
+     		var password=$('#pwd').val();
+
+     		$.ajax({
+     			type:"POST",
+     			url:"Recordsphp.php",
+     			data:{firstname:firstname,
+                      address:address,
+                      branch:branch,
+                      email:email,
+                      password:password
+     			      },
+     			success:function(data,status)
+     			{
+                   readRecords();
+     			},    
+     		});
+     	}
+
+//START DROPDWONS
+$(document).ready(function()
+{
+  $('#button01').click(function()
+  {
+           $('.button2').slideUp(500,function()
+        {
+           $('.button3').slideUp(500,function()
+        {
+           $('.button4').slideUp(500,function()
+        {
+           $('.button5').slideUp(500,function()
+        {
+           $('#button1').slideToggle(500);
+        }); 
+      });
+    });
+  });  
+ });
+});        
+$(document).ready(function()
+{
+  $('.button02').click(function()
+  {
+           $('#button1').slideUp(500,function()
+          {
+           $('.button3').slideUp(500,function()
+          {
+           $('.button4').slideUp(500,function()
+          {
+           $('.button5').slideUp(500,function()
+          {
+           $('.button2').slideToggle(500);
+        }); 
+      });
+    });
+  });  
+ });
+});
+$(document).ready(function()
+{
+  $('.button03').click(function()
+  {
+            $('#button1').slideUp(500,function()
+          {
+            $('.button2').slideUp(500,function()
+          {
+            $('.button4').slideUp(500,function()
+          {
+            $('.button5').slideUp(500,function()
+          {
+           $('.button3').slideToggle(500);
+        }); 
+      });
+    });
+  });  
+ });
+});
+$(document).ready(function()
+{
+  $('.button04').click(function()
+  {
+            $('#button1').slideUp(500,function()
+          {
+            $('.button2').slideUp(500,function()
+          {
+            $('.button3').slideUp(500,function()
+          {
+            $('.button5').slideUp(500,function()
+          {
+           $('.button4').slideToggle(500);
+        }); 
+      });
+    });
+  });  
+ });
+});
+$(document).ready(function()
+{
+  $('.button05').click(function()
+  {
+            $('#button1').slideUp(500,function()
+          {
+            $('.button2').slideUp(500,function()
+          {
+            $('.button3').slideUp(500,function()
+          {
+            $('.button4').slideUp(500,function()
+          {
+           $('.button5').slideToggle(500);
+        }); 
+      });
+    });
+  });  
+ });
+});    
+//END DROPDOWNS
+
